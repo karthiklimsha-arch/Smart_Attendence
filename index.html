@@ -175,6 +175,42 @@ background:#132c4b;
 color:white;
 }
 
+/* CONTACT POPUP */
+
+.contact-box{
+position:fixed;
+top:50%;
+left:50%;
+transform:translate(-50%,-50%);
+background:white;
+padding:25px;
+border-radius:12px;
+box-shadow:0 10px 30px rgba(0,0,0,0.3);
+display:none;
+z-index:2000;
+text-align:center;
+}
+
+.contact-box h3{
+margin-bottom:10px;
+color:#132c4b;
+}
+
+.contact-box p{
+margin:5px 0;
+font-size:14px;
+}
+
+.contact-box button{
+margin-top:15px;
+padding:8px 15px;
+border:none;
+background:#132c4b;
+color:white;
+border-radius:6px;
+cursor:pointer;
+}
+
 /* MOBILE */
 
 @media(max-width:768px){
@@ -202,7 +238,6 @@ display:none;
 display:flex;
 }
 
-/* HERO TEXT ADJUST */
 .hero h1{
 font-size:34px;
 }
@@ -211,14 +246,12 @@ font-size:34px;
 font-size:16px;
 }
 
-/* STACK CARDS */
 .features{
 flex-direction:column;
 align-items:center;
 margin-top:-50px;
 }
 
-/* FULL WIDTH CARDS */
 .card{
 width:90%;
 padding:35px;
@@ -283,13 +316,30 @@ Innovate. Automate. Educate
 </div>
 
 <div class="footer">
-© 2025 Geo-Attendance
+</div>
+
+<!-- CONTACT POPUP -->
+
+<div class="contact-box" id="contactBox">
+<h3>Admin Contact</h3>
+<p><strong>Name:</strong> Karthik</p>
+<p><strong>Phone:</strong> 6238616345</p>
+<p><strong>Email:</strong> karthiklimsha@gmail.com</p>
+<button onclick="closeContact()">Close</button>
 </div>
 
 <script>
 
 function toggleMenu(){
 document.getElementById("navLinks").classList.toggle("show");
+}
+
+function openContact(){
+document.getElementById("contactBox").style.display="block";
+}
+
+function closeContact(){
+document.getElementById("contactBox").style.display="none";
 }
 
 </script>
