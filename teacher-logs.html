@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Teacher Logs - Geo Attendance</title>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:"Segoe UI", Arial, sans-serif;
+}
+
+/* NAVBAR */
+
+.navbar{
+width:100%;
+background:#132c4b;
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:18px 60px;
+color:white;
+}
+
+.logo{
+display:flex;
+align-items:center;
+gap:10px;
+font-size:20px;
+font-weight:600;
+}
+
+.home-btn{
+color:white;
+text-decoration:none;
+font-size:16px;
+}
+
+/* BACKGROUND */
+
+body{
+min-height:100vh;
+background:linear-gradient(135deg, #4facfe, #00f2fe);
+display:flex;
+flex-direction:column;
+}
+
+/* CONTAINER */
+
+.container{
+margin:40px auto;
+background:rgba(255,255,255,0.95);
+padding:30px;
+width:90%;
+max-width:900px;
+border-radius:12px;
+box-shadow:0 10px 30px rgba(0,0,0,0.3);
+text-align:center;
+}
+
+/* TITLE */
+
+h2{
+margin-bottom:20px;
+color:#132c4b;
+}
+
+/* TABLE */
+
+table{
+width:100%;
+border-collapse:collapse;
+margin-top:20px;
+}
+
+th, td{
+padding:12px;
+border-bottom:1px solid #ddd;
+text-align:center;
+}
+
+th{
+background:#132c4b;
+color:white;
+}
+
+tr:hover{
+background:#f1f1f1;
+}
+
+/* BUTTON */
+
+.main-btn{
+margin-top:20px;
+padding:12px 20px;
+border:none;
+border-radius:6px;
+background:#132c4b;
+color:white;
+font-size:15px;
+cursor:pointer;
+transition:0.3s;
+}
+
+.main-btn:hover{
+background:#0b1f36;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+
+<div class="navbar">
+
+<div class="logo">
+<i class="fas fa-chalkboard-teacher"></i>
+Geo Attend
+</div>
+
+<a href="teacher-dashboard.html" class="home-btn">
+<i class="fas fa-home"></i> Dashboard
+</a>
+
+</div>
+
+<div class="container">
+
+<h2>Teacher Logs</h2>
+
+<table border="1">
+
+<thead>
+<tr>
+<th>Student</th>
+<th>Subject</th>
+<th>Time</th>
+<th>Status</th>
+</tr>
+</thead>
+
+<tbody id="attendanceTable"></tbody>
+
+</table>
+
+<button class="main-btn" onclick="downloadExcel()">
+    Download Attendance Excel
+</button>
+
+</div>
+
+<!-- SAME SCRIPT (DO NOT CHANGE) -->
+<script type="module" src="js/dashboard.js"></script>
+
+</body>
+</html>

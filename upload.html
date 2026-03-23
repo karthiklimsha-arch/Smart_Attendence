@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<title>Upload Student Photo</title>
+</head>
+
+<body>
+
+<h2>Register Student Face (Photo)</h2>
+
+<input type="file" id="imageUpload">
+
+<br><br>
+
+<img id="preview" width="300">
+
+<br><br>
+
+<button onclick="registerFace()">Register Face</button>
+
+<!-- Correct face-api -->
+<script defer src="https://cdn.jsdelivr.net/npm/face-api.js@0.22.2/dist/face-api.min.js"></script>
+
+<script type="module" src="js/upload.js"></script>
+
+</body>
+
+</html>

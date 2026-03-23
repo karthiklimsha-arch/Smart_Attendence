@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<title>Teacher Dashboard</title>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:"Segoe UI", Arial, sans-serif;
+}
+
+/* NAVBAR */
+
+.navbar{
+width:100%;
+background:#132c4b;
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:18px 60px;
+color:white;
+}
+
+.logo{
+display:flex;
+align-items:center;
+gap:10px;
+font-size:20px;
+font-weight:600;
+}
+
+.nav-actions{
+display:flex;
+gap:15px;
+}
+
+.nav-actions button{
+padding:10px 16px;
+border:none;
+border-radius:6px;
+background:#ffffff20;
+color:white;
+cursor:pointer;
+transition:0.3s;
+}
+
+.nav-actions button:hover{
+background:#ffffff40;
+}
+
+/* BODY */
+
+body{
+min-height:100vh;
+background:linear-gradient(135deg, #4facfe, #00f2fe);
+display:flex;
+flex-direction:column;
+}
+
+/* CONTAINER */
+
+.container{
+margin:auto;
+background:rgba(255,255,255,0.95);
+padding:40px;
+width:360px;
+border-radius:12px;
+box-shadow:0 10px 30px rgba(0,0,0,0.3);
+text-align:center;
+}
+
+/* TITLE */
+
+h2{
+margin-bottom:25px;
+color:#132c4b;
+}
+
+/* BUTTONS */
+
+.main-btn{
+width:100%;
+padding:13px;
+margin:12px 0;
+border:none;
+border-radius:6px;
+background:#132c4b;
+color:white;
+font-size:15px;
+cursor:pointer;
+transition:0.3s;
+}
+
+.main-btn:hover{
+background:#0b1f36;
+}
+
+/* Excel Button */
+
+.excel-btn{
+background:#28a745;
+}
+
+.excel-btn:hover{
+background:#1e7e34;
+}
+
+/* Session link */
+
+#sessionLink{
+margin-top:10px;
+font-size:14px;
+color:#555;
+word-break:break-all;
+}
+
+/* Hidden table */
+
+.hidden-table{
+display:none;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+
+<div class="navbar">
+
+<div class="logo">
+<i class="fas fa-chalkboard-teacher"></i>
+Geo Attend
+</div>
+
+<div class="nav-actions">
+<button onclick="window.location.href='teacher-logs.html'">
+<i class="fas fa-file-alt"></i> Logs
+</button>
+</div>
+
+</div>
+
+<div class="container">
+
+<h2>Teacher Dashboard</h2>
+
+<button class="main-btn" onclick="startSession()">Start Attendance Session</button>
+
+<p id="sessionLink"></p>
+
+<button class="main-btn excel-btn" onclick="downloadExcel()">
+Download Attendance Excel
+</button>
+
+</div>
+
+<!-- Hidden table (DO NOT REMOVE) -->
+
+<table border="1" class="hidden-table">
+
+<thead>
+<tr>
+<th>Student</th>
+<th>Subject</th>
+<th>Time</th>
+<th>Status</th>
+</tr>
+</thead>
+
+<tbody id="attendanceTable"></tbody>
+
+</table>
+
+<script type="module" src="js/session.js"></script>
+<script type="module" src="js/dashboard.js"></script>
+
+</body>
+</html>
